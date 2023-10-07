@@ -14,7 +14,7 @@ class ConfigurationTest extends TestCase
         $promocodes = Promocodes::output();
         $promocode = $promocodes[0];
 
-        $this->assertRegExp('/^[0-9]/', $promocode);
+        $this->assertMatchesRegularExpression('/^[0-9]/', $promocode);
     }
 
     /** @test */
@@ -47,7 +47,7 @@ class ConfigurationTest extends TestCase
         $promocodes = Promocodes::output();
         $promocode = $promocodes[0];
 
-        $this->assertRegExp('/(.*)\s(.*)\s(.*)\s(.*)/', $promocode);
+        $this->assertMatchesRegularExpression('/(.*)\s(.*)\s(.*)\s(.*)/', $promocode);
     }
 
     /** @test */
